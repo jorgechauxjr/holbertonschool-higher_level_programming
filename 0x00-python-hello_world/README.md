@@ -25,7 +25,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 - Your code should use the PEP 8 style (version 1.7.*)
 - All your files must be executable
 - The length of your files will be tested using wc
-- Shell Scripts
+### Shell Scripts
 - Allowed editors: vi, vim, emacs
 - All your scripts will be tested on Ubuntu 14.04 LTS
 -  All your scripts should be exactly two lines long (wc -l file should print 2)
