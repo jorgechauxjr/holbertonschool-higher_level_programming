@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 
-# "end" key of print function will set the string that needs
+# The "end" key of print function will set the string that needs
 #  to be appended when printing is done.
 # ends=""allow me to append and print in the conitionals, instead of new line.
 print("Last digit of {0:d} is ".format(number), end="")
