@@ -10,11 +10,11 @@ if number < 0:
 else:
     lastDigit = number % 10
 
-print("Last digit of {0:d} is {1:d}".format(number, lastDigit), end="")
+print("Last digit of {0:d} is {1:d} ".format(number, lastDigit), end="")
 
 if lastDigit > 5:
-    print(" and is greater than 5".format(lastDigit))
+    print("and is greater than 5".format(lastDigit))
 elif lastDigit == 0:
-    print(" and is 0".format(number, lastDigit))
+    print("and is 0".format(number, lastDigit))
 else:
-    print(" and is less than 6 and not 0".format(number, lastDigit))
+    print("and is less than 6 and not 0".format(number, lastDigit))
