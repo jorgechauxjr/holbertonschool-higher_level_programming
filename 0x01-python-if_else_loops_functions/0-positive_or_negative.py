@@ -7,4 +7,4 @@ elif number == 0:
     print("{0:d} is zero".format(number))
 else:
     print("{0:d} is negative".format(number))
-# {0:d} zero means de 0 parameter of format, d is digit
+# {0:d} zero makes reference to the 0 parameter of format(), d is digit
