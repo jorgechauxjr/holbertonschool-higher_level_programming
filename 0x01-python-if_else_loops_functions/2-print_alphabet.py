@@ -5,3 +5,4 @@ for i in range(ord('a'), ord('z')+1):
 # in this case'a'takes 97 and'z' 122.
 # The "for" will not print the last value (z) foor that reason I need to add 1
 # "end" on print func avoid \n and allow me to append in the same line
+# chr() receivves ascii code (integer) and return the character.
