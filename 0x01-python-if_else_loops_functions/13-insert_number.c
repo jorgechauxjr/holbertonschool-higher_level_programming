@@ -6,7 +6,7 @@
  *Description: Function that inserts a number into a sorted singly linked list.
  * @head: double pointer of type listint_t
  * @number: number to be inserted in the list
- * Return: 0 if there is no cycle, 1 if there is a cycle
+ * Return: the new node
  **/
 listint_t *insert_node(listint_t **head, int number)
 {
