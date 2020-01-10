@@ -5,6 +5,14 @@
 class Square:
     def __init__(self, size=0):  # init allow square class to be used
         self.__size = size   # asign private instance attribute size
+        try:
+            self.position = position
+        except TypeError as err:
+            print(err)
+
+    @property
+    def size(self):
+        return self.__size
 
     @property
     def size(self):
@@ -30,6 +38,10 @@ class Square:
                 print()
         else:
             print()
+
+    @property
+    def position(self):
+        return self.__position
 
     @position.setter
     def position(self, value):
