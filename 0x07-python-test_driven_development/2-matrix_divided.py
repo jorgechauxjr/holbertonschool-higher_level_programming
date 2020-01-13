@@ -3,6 +3,7 @@
 Fucntion that divides all elements of a matrix
 """
 
+
 def matrix_divided(matrix, div):
     """ Divides all elements of a matrix
 
@@ -17,7 +18,7 @@ def matrix_divided(matrix, div):
     div2 = "division by zero"
 
     if not isinstance(matrix, list) or len(matrix) is 0:
-        raise(err1)
+        raise TypeError(err1)
     for element in matrix:
         if not isinstance(element, list):
             raise TypeError(err1)
