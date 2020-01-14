@@ -89,3 +89,13 @@ Should return an error when cannot convert float NaN to integer:
     Traceback (most recent call last):
     ...
     ValueError: cannot convert float NaN to integer
+
+Missing one argument
+    >>> add_integer(25)
+    123
+
+Missing two arguments
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
