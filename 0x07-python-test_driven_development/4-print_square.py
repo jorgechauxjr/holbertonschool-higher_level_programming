@@ -3,6 +3,7 @@
 Function that prints a square
 """
 
+
 def print_square(size):
     """
     Function that prints a square
