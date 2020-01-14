@@ -1,19 +1,20 @@
 #!/usr/bin/python
-""" Class rectangle that defines a
-rectangel by based on 0-rectangle.py
- """
-
-
 class Rectangle:
+    """
+    Class rectangle that defines a
+    rectangel by based on 0-rectangle.py
+    """
 
-    """ Constructor Method """
     def __init__(self, width=0, height=0):
+        """ Constructor Method for Rectangle """
+
         self.width = width
         self.height = height
 
-    """Private instnace attributte: width  """
     @property
     def width(self):
+        """Private instnace attributte: width  """
+
         return self.__width
 
     @width.setter
@@ -24,9 +25,10 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-        """Private instnace attributte: height  """
     @property
     def height(self):
+        """Private instnace attributte: height  """
+
         return self.__height
 
     @height.setter
