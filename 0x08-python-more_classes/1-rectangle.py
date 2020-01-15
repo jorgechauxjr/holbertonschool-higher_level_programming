@@ -1,4 +1,7 @@
 #!/usr/bin/python
+"""rectangle class"""
+
+
 class Rectangle:
     """
     Class rectangle that defines a
