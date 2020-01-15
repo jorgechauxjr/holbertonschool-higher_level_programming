@@ -13,11 +13,9 @@ class Rectangle:
 
         self.width = width
         self.height = height
-
     @property
     def width(self):
         """Private instnace attributte: width  """
-
         return self.__width
 
     @width.setter
@@ -31,7 +29,6 @@ class Rectangle:
     @property
     def height(self):
         """Private instnace attributte: height  """
-
         return self.__height
 
     @height.setter
