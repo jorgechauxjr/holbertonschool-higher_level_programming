@@ -1,9 +1,12 @@
-#!/usr/bin/python
+#!/usr/bin/python3
+"""
+    0-rectangle module
+    Empty class Rectangle that defines a rectangle
+"""
+
+
 class Rectangle:
-    """ Empty rectangle """
-
-Rectangle = __import__('0-rectangle').Rectangle
-
-my_rectangle = Rectangle()
-print(type(my_rectangle))
-print(my_rectangle.__dict__)
+    """
+        Empty class Rectangle that defines a rectangle
+    """
+    pass
