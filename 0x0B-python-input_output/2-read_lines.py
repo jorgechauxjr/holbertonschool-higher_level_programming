@@ -6,6 +6,6 @@ def read_lines(filename="", nb_lines=0):
     line_number = 0
     with open(filename, encoding='utf-8') as f:
         for line in f:
-            if nb_lines <= 0 or nb_lines >= line_number:
+            if (nb_lines <= 0) or (nb_lines >= line_number):
                 print(line, end="")
             line_number += 1
