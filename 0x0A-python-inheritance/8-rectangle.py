@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 class BaseGeometry:
     """Class BaseGeometry"""
 
@@ -21,7 +22,7 @@ class Rectangle(BaseGeometry):
         """Constructor method for Rectangle
         Instantiation with width and height"""
 
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
         self.__width = width
         self.__height = height
