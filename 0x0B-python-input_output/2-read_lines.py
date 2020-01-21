@@ -4,8 +4,8 @@ def read_lines(filename="", nb_lines=0):
     and prints it to stdout"""
 
     line_number = 0
-    with open(filename, 'r') as o_file:
-        for line in o_file:
+    with open(filename, encoding='utf-8') as f:
+        for line in f:
             if nb_lines <= 0 or nb_lines >= line_number:
                 print(line, end="")
             line_number += 1
