@@ -1,0 +1,55 @@
+Test for BaseGeometry
+
+Import module
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+    >>> bg = BaseGeometry()
+
+receiving one argument
+       >>> bg.integer_validator("value")
+       Traceback (most recent call last):
+       ...
+       TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+
+strings as parameter
+    >>> bg.integer_validator("name", "Juan")
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+Negative number
+ >>> bg.integer_validator("test", -1)
+       Traceback (most recent call last):
+       ...
+       ValueError: test must be greater than 0
+
+No arguments
+     >>> bg.integer_validator()
+     Traceback (most recent call last):
+     ...
+     TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+dict in the second argument
+       >>> bg.integer_validator("test", {1, 1})
+       Traceback (most recent call last):
+       ...
+       TypeError: test must be an integer
+
+Tuple in the second argument
+       >>> bg.integer_validator("test", (1,))
+       Traceback (most recent call last):
+       ...
+       TypeError: test must be an integer
+
+List in the second argument
+       >>> bg.integer_validator("test", [1, 1])
+       Traceback (most recent call last):
+       ...
+       TypeError: test must be an integer
+
+None in the second argument
+       >>> bg.integer_validator("test", None)
+       Traceback (most recent call last):
+       ...
+       TypeError: test must be an integer
