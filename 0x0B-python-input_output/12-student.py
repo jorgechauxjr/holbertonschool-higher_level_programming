@@ -13,8 +13,10 @@ class Student:
         """Method that retrieves a dictionary representation
         of a Student instance. (same as 10-class_to_json.py)"""
 
-        my_dict = self.__dict__
-
-        if type(attrs) is list and all(type(x) == str for x in attrs):
-            return {y: my_dict[y] for y in my_dict if y in attrs}
-        return my_dict
+        if attrs is None:
+            return self.__dict__
+        dict = {}
+        for i in attrs:
+            if i in self.__dict__:
+                dict[i] = self.__dict__[i]
+        return dict
