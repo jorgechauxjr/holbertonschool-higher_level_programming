@@ -104,7 +104,7 @@ class Rectangle(Base):
             print(" " * self.__x, end="")
             print("#" * self.__width)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
 
         if args:
             for i, element in enumerate(args):
@@ -118,3 +118,7 @@ class Rectangle(Base):
                     self.__x = element
                 elif i == 4:
                     self.__y = element
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key) is True:
+                    setattr(self, key, value)
