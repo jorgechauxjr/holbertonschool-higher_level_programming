@@ -32,11 +32,19 @@ class Base:
         """Writes the JSON string representation of list_objs to a file"""
 
         newfile = "{}.json".format(cls.__name__)
-        dicct = []
+        ls = []
 
         if list_objs is not None:
             for i in list_objs:
-                dicct.append(cls.to_dictionary(i))
+                ls.append(cls.to_dictionary(i))
 
-        with open(newfile, "w", encoding="UTF8") as lista:
-            lista.write(cls.to_json_string(dicct))
+        with open(newfile, "w", encoding='utf-8') as f:
+            f.write(cls.to_json_string(dicct))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of the JSON string representation json_string"""
+
+        if json_string is None:
+            return []
+        return json.loads(json_string)
