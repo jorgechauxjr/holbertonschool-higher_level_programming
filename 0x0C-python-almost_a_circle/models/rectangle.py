@@ -87,10 +87,6 @@ class Rectangle(Base):
 
         return self.__width * self.__height
 
-    def display(self):
-        for x in range(self.__height):
-            print('#' * self.__width)
-
     def __str__(self):
         """Return string representation of class."""
 
@@ -98,6 +94,8 @@ class Rectangle(Base):
             self.id, self.__x, self.__y, self.__width, self.__height)
 
     def display(self):
+        """Print in stdo the Rectangle"""
+
         for i in range(self.__y):
             print()
         for i in range(self.__height):
@@ -105,6 +103,7 @@ class Rectangle(Base):
             print("#" * self.__width)
 
     def update(self, *args, **kwargs):
+        """Update the class rectangle"""
 
         if args:
             for i, element in enumerate(args):
