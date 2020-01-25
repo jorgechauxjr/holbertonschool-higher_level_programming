@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import json
+import os
 
 
 class Base:
@@ -39,7 +40,7 @@ class Base:
                 ls.append(cls.to_dictionary(i))
 
         with open(newfile, "w", encoding='utf-8') as f:
-            f.write(cls.to_json_string(dicct))
+            f.write(cls.to_json_string(ls))
 
     @staticmethod
     def from_json_string(json_string):
@@ -62,3 +63,19 @@ class Base:
             dummy = cls(2, 4)
             dummy.update(**dictionary)
             return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances"""
+
+        newfile = "{}.json".format(cls.__name__)
+        my_list = []
+
+        if os.path.isfile(newfile):
+            with open(newfile, encoding="utf-8") as f:
+                items = cls.from_json_string(f.read())
+            for i in items:
+                my_list.append(cls.create(**i))
+            return my_list
+        else:
+            return []
