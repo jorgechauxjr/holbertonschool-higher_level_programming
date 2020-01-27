@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""This is class base"""
 import json
 import os
 
