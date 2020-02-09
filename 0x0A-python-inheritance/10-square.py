@@ -17,3 +17,6 @@ class Square(Rectangle):
         super().integer_validator("size", size)
         super().__init__(size, size)
         self.__size = size
+
+"""Because square inherits from Rectangle and Rectangle from BaseGeometry
+the method area is implemented by inheritance"""
