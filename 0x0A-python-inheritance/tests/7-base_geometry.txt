@@ -81,3 +81,8 @@ None in the second argument
     Traceback (most recent call last):
     ...
     TypeError: test must be an integer
+
+True in the second parameter
+    >>> bg.integer_validator("list", True)
+    Traceback (most recent call last):
+    TypeError: list must be an integer
