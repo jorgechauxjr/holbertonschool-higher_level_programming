@@ -31,7 +31,6 @@ if __name__ == "__main__":
     # The execute function requires one parameter, the sql query.
     cur.execute(statement, (state_to_search,))
     all_rows = cur.fetchall()
-    for row in all_rows:
-        print(row)
+    print(", ".join(row[0] for row in all_rows))
     cur.close()
     db.close()
