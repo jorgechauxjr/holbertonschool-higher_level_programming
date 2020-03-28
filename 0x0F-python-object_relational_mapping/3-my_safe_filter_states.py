@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 Lists all states from the database hbtn_0e_0_usa with a name starting with N
+avoiding SQL injection
 Arguments:
     mysql_username - username to connect the mySQL
     mysql passwd - password to connect the mySQL
@@ -22,9 +23,10 @@ if __name__ == "__main__":
                          user=mysql_username, passwd=mysql_password,
                          db=database_name, charset="utf8")
     cur = db.cursor()
+    statement = """SELECT *FROM states
+    WHERE BINARY states.name = %s ORDER BY states.id ASC"""
     # The execute function requires one parameter, the sql query.
-    cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'\
-                ORDER BY id ASC", (name_to_search,))
+    cur.execute(statement, (name_to_search,))
     all_rows = cur.fetchall()
     for row in all_rows:
         print(row)
