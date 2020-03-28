@@ -23,8 +23,8 @@ if __name__ == "__main__":
                          db=database_name, charset="utf8")
     cur = db.cursor()
     # The execute function requires one parameter, the sql query.
-    cur.execute("SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
-                .format(name_to_search))
+    cur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'\
+                ORDER BY id ASC".format(name_to_search))
     all_rows = cur.fetchall()
     for row in all_rows:
         print(row)
