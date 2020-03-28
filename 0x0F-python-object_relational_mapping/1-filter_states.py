@@ -21,7 +21,8 @@ if __name__ == "__main__":
                          db=database_name, charset="utf8")
     cur = db.cursor()
     # The execute function requires one parameter, the query.
-    cur.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
+    cur.execute("SELECT * FROM states WHERE
+                name LIKE BINARY 'N%' ORDER BY id ASC")
     all_rows = cur.fetchall()
     for row in all_rows:
         print(row)
