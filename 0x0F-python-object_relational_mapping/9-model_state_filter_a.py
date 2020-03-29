@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Lists all State objects that contain the letter a from the database hbtn_0e_6_usa
+Lists all State objs that contain the letter a from the database hbtn_0e_6_usa
 Arguments:
     mysql_usr - username to connect the mySQL
     mysql psw - password to connect the mySQL
