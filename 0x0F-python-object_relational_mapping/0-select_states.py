@@ -5,6 +5,7 @@ Arguments:
     mysql_username - username to connect the mySQL
     mysql passwd - password to connect the mySQL
     database_name - Name of the database
+         http://www.mikusa.com/python-mysql-docs/index.html
 """
 
 
