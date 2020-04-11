@@ -1,27 +1,11 @@
 #!/usr/bin/python3
-""" function find_peak """
+"""Finds a peak in a list of unsorted integers"""
 
 
 def find_peak(list_of_integers):
-    peak, number, prev = 0, 0, 0
-    first = True
-
-    if len(list_of_integers) == 1:
-        return list_of_integers[0]
-    elif len(list_of_integers) == 2:
+    """Peak in a list of unsorted integers"""
+    if type(list_of_integers) == list:
+        if len(list_of_integers) == 0:
+            return None
         return max(list_of_integers)
-
-    if list_of_integers:
-        for number in list_of_integers:
-            if first is True:
-                prev = number
-                first = False
-            else:
-                if number >= prev and number >= peak:
-                    peak = number
-                    prev = number
-                else:
-                    prev = number
-        return peak
-    else:
-        return None
+    return None
