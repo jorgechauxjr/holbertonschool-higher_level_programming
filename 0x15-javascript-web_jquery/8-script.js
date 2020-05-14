@@ -1,5 +1,5 @@
 $(() => {
-  $.get('https://swapi-api.hbtn.io/api/films/?format=json', (data, textStatus) =>	{
+  $.get('https://swapi-api.hbtn.io/api/films/?format=json', (data, textStatus) => {
   // console.log(data.results, textStatus);
     if (textStatus === 'success') {
       const titles = data.results;
